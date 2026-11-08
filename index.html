@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Без меж — пасажирські перевезення у кріслах-реклайнерах</title>
+<meta name="description" content="Пасажирські перевезення «Без меж»: крісла-реклайнери, що розкладаються повністю, підставки для ніг, подушки й пледи. Бронювання у менеджера.">
+<meta name="theme-color" content="#f6fbfa">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%2312796f'/%3E%3Cpath d='M14 40h36' stroke='%239fe5da' stroke-width='5' stroke-linecap='round'/%3E%3Ccircle cx='32' cy='27' r='7' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geologica:wght@400;600;700;800&family=Onest:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="skip" href="#main">Перейти до змісту</a>
+
+<header class="top" id="top">
+  <div class="wrap top__in">
+    <a class="logo" href="#top" aria-label="Без меж — на початок">
+      <span class="logo__mark" aria-hidden="true"></span>
+      <span class="logo__word">Без меж</span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Розділи">
+      <a href="#seat">Крісло</a>
+      <a href="#comfort">Комфорт</a>
+      <a href="#places">Місця</a>
+      <a href="#salons">Салони</a>
+      <a href="#book">Як забронювати</a>
+      <a href="#contacts">Контакти</a>
+    </nav>
+    <a class="top__phone" href="tel:+380685609199">068 560 91 99</a>
+    <button class="burger" id="burger" type="button" aria-label="Меню" aria-expanded="false" aria-controls="nav"><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- hero -->
+  <section class="hero">
+    <div class="wrap hero__in">
+      <div class="hero__copy">
+        <h1 class="hero__title">Дорога, в&nbsp;якій можна виспатися</h1>
+        <p class="hero__lead">Пасажирські перевезення в салоні з кріслами-реклайнерами. Спинка розкладається повністю, під ноги висувається підставка, а подушка й плед вже чекають на місці.</p>
+        <div class="hero__cta">
+          <button class="btn btn--main" type="button" data-book>Забронювати місце</button>
+          <a class="btn btn--ghost" href="tel:+380685609199">Подзвонити менеджеру</a>
+        </div>
+        <ul class="hero__facts">
+          <li><b>Реклайнер</b> у кожного пасажира</li>
+          <li><b>Підставка</b> для ніг</li>
+          <li><b>Від дверей</b> до дверей</li>
+        </ul>
+      </div>
+      <figure class="hero__photo">
+        <img src="images/tiff-cabin-1200.webp" srcset="images/tiff-cabin-640.webp 640w, images/tiff-cabin-1200.webp 1200w" sizes="(max-width: 860px) 100vw, 46vw" width="960" height="1280" alt="Салон мікроавтобуса з бірюзовими шкіряними кріслами-реклайнерами та підсвіченою стелею" fetchpriority="high">
+      </figure>
+    </div>
+  </section>
+
+  <!-- the seat -->
+  <section class="seat" id="seat" aria-labelledby="seat-title">
+    <div class="wrap seat__in">
+      <div class="seat__text">
+        <h2 id="seat-title">Одне крісло — три положення</h2>
+        <p class="seat__intro">Оберіть, як вам зручніше їхати. Крісло регулюється прямо в дорозі.</p>
+        <div class="modes" role="tablist" aria-label="Положення крісла">
+          <button class="mode is-on" role="tab" aria-selected="true" data-mode="sit">Сидіти</button>
+          <button class="mode" role="tab" aria-selected="false" data-mode="rest">Відпочивати</button>
+          <button class="mode" role="tab" aria-selected="false" data-mode="sleep">Спати</button>
+        </div>
+        <p class="mode__desc" id="mode-desc" aria-live="polite">Звичайна посадка з підлокітниками й ременем безпеки — для перших кілометрів, кави й розмов.</p>
+        <div class="seat__progress" id="seat-progress" aria-hidden="true"><span></span></div>
+      </div>
+      <div class="seat__stage">
+        <div class="chair-card"><svg class="chair" id="chair" viewBox="0 0 420 300" role="img" aria-label="Схема крісла-реклайнера">
+          <line class="chair__floor" x1="30" y1="262" x2="390" y2="262"/>
+          <rect class="chair__base" x="168" y="196" width="78" height="66" rx="10"/>
+          <g class="chair__back" id="chair-back">
+            <rect class="chair__part" x="128" y="40" width="40" height="140" rx="18"/>
+            <rect class="chair__head" x="122" y="44" width="52" height="30" rx="14"/>
+          </g>
+          <rect class="chair__part" x="140" y="168" width="140" height="34" rx="14"/>
+          <rect class="chair__arm" x="150" y="140" width="112" height="14" rx="7"/>
+          <g class="chair__legs" id="chair-legs">
+            <rect class="chair__part" x="270" y="178" width="30" height="76" rx="12"/>
+          </g>
+        </svg></div>
+        <figure class="seat__photo">
+          <img src="images/tiff-recline-640.webp" srcset="images/tiff-recline-640.webp 640w, images/tiff-recline-1200.webp 1200w" sizes="(max-width: 860px) 60vw, 300px" width="960" height="1280" loading="lazy" alt="Крісло-реклайнер з висунутою підставкою для ніг">
+          <figcaption>Підставка для ніг висувається з-під сидіння</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- comfort -->
+  <section class="comfort" id="comfort" aria-labelledby="comfort-title">
+    <div class="wrap">
+      <h2 id="comfort-title">Що є в салоні</h2>
+      <ul class="feats">
+        <li class="feat"><svg class="ic" aria-hidden="true"><use href="#i-seat"/></svg><div><h3>Крісла-реклайнери</h3><p>Спинка розкладається повністю, тож у дорозі можна по-справжньому лягти.</p></div></li>
+        <li class="feat"><svg class="ic" aria-hidden="true"><use href="#i-legs"/></svg><div><h3>Підставки для ніг</h3><p>Ноги не затікають навіть на довгому рейсі.</p></div></li>
+        <li class="feat"><svg class="ic" aria-hidden="true"><use href="#i-pillow"/></svg><div><h3>Подушки й пледи</h3><p>Лежать на полиці над кріслами, беріть, коли захочеться спати.</p></div></li>
+        <li class="feat"><svg class="ic" aria-hidden="true"><use href="#i-cold"/></svg><div><h3>Холодильник</h3><p>Вода й напої залишаються холодними всю дорогу.</p></div></li>
+        <li class="feat"><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg><div><h3>Зоряна стеля</h3><p>М'яке підсвічування замість яскравих ламп — вночі не заважає спати.</p></div></li>
+        <li class="feat"><svg class="ic" aria-hidden="true"><use href="#i-belt"/></svg><div><h3>Ремінь на кожному місці</h3><p>Підлокітники та ремені безпеки в кожному кріслі.</p></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- seat map -->
+  <section class="map" id="places" aria-labelledby="map-title">
+    <div class="wrap map__in">
+      <div>
+        <h2 id="map-title">Оберіть своє місце</h2>
+        <p class="map__lead">Натисніть на крісла, у яких хочете їхати. Обрані місця одразу потраплять у заявку.</p>
+        <p class="map__picked" id="map-picked" aria-live="polite">Місця ще не обрані</p>
+        <button class="btn btn--main" type="button" data-book>Забронювати обрані</button>
+        <p class="map__note">Схема умовна, точне розташування підтвердить менеджер.</p>
+      </div>
+      <div class="bus" aria-label="Схема салону">
+        <span class="bus__driver">Водій</span>
+        <span class="bus__door" aria-hidden="true"></span>
+        <div class="bus__rows" id="bus-rows"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- salons -->
+  <section class="salons" id="salons" aria-labelledby="salons-title">
+    <div class="wrap">
+      <div class="salons__head">
+        <h2 id="salons-title">Два салони</h2>
+        <div class="tabs" role="tablist" aria-label="Салон">
+          <button class="tab is-on" role="tab" aria-selected="true" data-salon="tiff">Бірюзовий</button>
+          <button class="tab" role="tab" aria-selected="false" data-salon="ivory">Світлий</button>
+        </div>
+      </div>
+      <p class="salons__note" id="salon-note">Шкіряні крісла-реклайнери кольору тіффані, світлова стеля та холодильник.</p>
+      <div class="gallery" id="gallery">
+        <button class="shot shot--big" data-salon="tiff" data-full="images/tiff-cabin-1200.webp"><img src="images/tiff-cabin-640.webp" alt="Бірюзовий салон, вид уздовж проходу" loading="lazy" width="640" height="853"></button>
+        <button class="shot" data-salon="tiff" data-full="images/tiff-aisle-1200.webp"><img src="images/tiff-aisle-640.webp" alt="Ряди бірюзових крісел" loading="lazy" width="640" height="853"></button>
+        <button class="shot" data-salon="tiff" data-full="images/tiff-recline-1200.webp"><img src="images/tiff-recline-640.webp" alt="Крісло з висунутою підставкою для ніг" loading="lazy" width="640" height="853"></button>
+        <button class="shot shot--wide" data-salon="tiff" data-full="images/tiff-fridge-1200.webp"><img src="images/tiff-fridge-640.webp" alt="Холодильник між кріслами" loading="lazy" width="640" height="853"></button>
+        <button class="shot shot--big" data-salon="ivory" data-full="images/ivory-door-1200.webp" hidden><img src="images/ivory-door-640.webp" alt="Світлий салон, вид від дверей" loading="lazy" width="640" height="737"></button>
+        <button class="shot" data-salon="ivory" data-full="images/ivory-rear-1200.webp" hidden><img src="images/ivory-rear-640.webp" alt="Світлі шкіряні крісла з подушками" loading="lazy" width="640" height="729"></button>
+        <button class="shot" data-salon="ivory" data-full="images/ivory-seat-1200.webp" hidden><img src="images/ivory-seat-640.webp" alt="Крісло з підлокітниками й ременем безпеки" loading="lazy" width="640" height="716"></button>
+        <button class="shot shot--wide" data-salon="ivory" data-full="images/ivory-row-1200.webp" hidden><img src="images/ivory-row-640.webp" alt="Задній ряд крісел світлого салону" loading="lazy" width="640" height="745"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- how to book -->
+  <section class="book" id="book" aria-labelledby="book-title">
+    <div class="wrap">
+      <h2 id="book-title">Як забронювати</h2>
+      <ol class="steps">
+        <li><h3>Залиште заявку</h3><p>Вкажіть, звідки й куди їдете, дату та кількість пасажирів.</p></li>
+        <li><h3>Менеджер підтвердить</h3><p>Напише у WhatsApp, назве ціну й час, коли за вами приїдуть.</p></li>
+        <li><h3>Сідайте й відпочивайте</h3><p>Забираємо від дверей, решту дороги ви проводите в кріслі.</p></li>
+      </ol>
+      <button class="btn btn--main" type="button" data-book>Залишити заявку</button>
+    </div>
+  </section>
+
+  <!-- contacts -->
+  <section class="contacts" id="contacts" aria-labelledby="contacts-title">
+    <div class="wrap">
+      <h2 id="contacts-title">Менеджери на зв'язку</h2>
+      <p class="contacts__lead">Подзвоніть або напишіть — підберемо рейс і місце.</p>
+      <div class="mgrs">
+        <article class="mgr">
+          <p class="mgr__role">Менеджер</p>
+          <a class="mgr__phone" href="tel:+380685609199">068 560 91 99</a>
+          <div class="mgr__links">
+            <a class="btn btn--small btn--call" href="tel:+380685609199">Подзвонити</a>
+            <a class="btn btn--small btn--wa" href="https://wa.me/380685609199" target="_blank" rel="noopener">WhatsApp</a>
+            <a class="btn btn--small btn--viber" href="viber://chat?number=%2B380685609199">Viber</a>
+          </div>
+        </article>
+        <article class="mgr">
+          <p class="mgr__role">Менеджер</p>
+          <a class="mgr__phone" href="tel:+380976208330">097 620 83 30</a>
+          <div class="mgr__links">
+            <a class="btn btn--small btn--call" href="tel:+380976208330">Подзвонити</a>
+            <a class="btn btn--small btn--wa" href="https://wa.me/380976208330" target="_blank" rel="noopener">WhatsApp</a>
+            <a class="btn btn--small btn--viber" href="viber://chat?number=%2B380976208330">Viber</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__in">
+    <a class="logo" href="#top"><span class="logo__mark" aria-hidden="true"></span><span class="logo__word">Без меж</span></a>
+    <p>Пасажирські перевезення в кріслах-реклайнерах</p>
+    <p class="foot__phones"><a href="tel:+380685609199">068 560 91 99</a><a href="tel:+380976208330">097 620 83 30</a></p>
+    <p class="foot__copy">© <span id="year">2026</span> Без меж</p>
+  </div>
+</footer>
+
+<nav class="dock" aria-label="Швидкі дії">
+  <a href="tel:+380685609199" class="dock__call">Подзвонити</a>
+  <button type="button" class="dock__book" data-book>Забронювати</button>
+</nav>
+
+<!-- booking -->
+<dialog class="modal" id="modal" aria-labelledby="modal-title">
+  <form class="form" id="form" method="dialog" novalidate>
+    <div class="modal__head">
+      <h2 id="modal-title">Заявка на поїздку</h2>
+      <button class="modal__close" type="button" data-close aria-label="Закрити"><svg class="ic" aria-hidden="true"><use href="#i-x"/></svg></button>
+    </div>
+    <div class="form__grid">
+      <label>Звідки<input name="from" required maxlength="60" autocomplete="off" placeholder="Місто"></label>
+      <label>Куди<input name="to" required maxlength="60" autocomplete="off" placeholder="Місто"></label>
+      <label>Дата<input name="date" type="date" required></label>
+      <label>Пасажирів<input name="pax" type="number" min="1" max="20" value="1" required></label>
+      <label>Ваше ім'я<input name="name" required maxlength="60" autocomplete="name"></label>
+      <label>Телефон<input name="phone" type="tel" inputmode="tel" required maxlength="20" autocomplete="tel" placeholder="+380"></label>
+    </div>
+    <p class="form__seats" id="form-seats" hidden></p>
+    <label>Коментар <span class="opt">(необов'язково)</span><textarea name="comment" rows="2" maxlength="300"></textarea></label>
+    <fieldset class="pick">
+      <legend>Кому надіслати заявку у WhatsApp</legend>
+      <label><input type="radio" name="mgr" value="380685609199" checked><span>068 560 91 99</span></label>
+      <label><input type="radio" name="mgr" value="380976208330"><span>097 620 83 30</span></label>
+    </fieldset>
+    <p class="form__err" id="form-err" role="alert"></p>
+    <button class="btn btn--main btn--block" type="submit">Надіслати у WhatsApp</button>
+  </form>
+</dialog>
+
+<dialog class="lightbox" id="lightbox" aria-label="Перегляд фото">
+  <button class="lightbox__close" type="button" data-close aria-label="Закрити"><svg class="ic" aria-hidden="true"><use href="#i-x"/></svg></button>
+  <button class="lightbox__nav lightbox__nav--prev" type="button" data-lb="prev" aria-label="Попереднє фото">‹</button>
+  <img id="lb-img" alt="">
+  <button class="lightbox__nav lightbox__nav--next" type="button" data-lb="next" aria-label="Наступне фото">›</button>
+  <span class="lightbox__count" id="lb-count"></span>
+</dialog>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-seat" viewBox="0 0 24 24"><path d="M6 3v9a3 3 0 0 0 3 3h7l3 5M6 12h9M9 15l-2 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-legs" viewBox="0 0 24 24"><path d="M3 14h10l6-6M13 14l2 6M3 18h8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-pillow" viewBox="0 0 24 24"><path d="M4 8c3-2 13-2 16 0 1 3 1 5 0 8-3 2-13 2-16 0-1-3-1-5 0-8z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+  <symbol id="i-cold" viewBox="0 0 24 24"><path d="M12 3v18M4.5 7.5l15 9M19.5 7.5l-15 9M9 4l3 3 3-3M9 20l3-3 3 3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3l2.6 5.6 6 .7-4.5 4.1 1.2 6-5.3-3-5.3 3 1.2-6L3.4 9.3l6-.7z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+  <symbol id="i-belt" viewBox="0 0 24 24"><path d="M7 3l10 18M5 14h14v4H5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</svg>
+
+<script src="js/app.js"></script>
+</body>
+</html>
