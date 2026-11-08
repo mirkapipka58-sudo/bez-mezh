@@ -308,7 +308,12 @@
     lastFocus = d.activeElement;
     if (typeof dlg.showModal === 'function') dlg.showModal(); else dlg.setAttribute('open', '');
     lockScroll(true);
+    dlg.scrollLeft = 0; w.scrollTo(w.scrollX ? 0 : w.scrollX, w.scrollY);
   }
+  /* never let a dialog be panned sideways (iOS in-app browsers) */
+  [lb, $('#modal'), $('#chat')].forEach(function (dlg) {
+    dlg.addEventListener('scroll', function () { if (dlg.scrollLeft) dlg.scrollLeft = 0; }, { passive: true });
+  });
   [lb, $('#modal'), $('#chat')].forEach(function (dlg) {
     dlg.addEventListener('close', function () {
       lockScroll(false);
