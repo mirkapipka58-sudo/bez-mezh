@@ -246,6 +246,7 @@
           <div class="mgr__links">
             <a class="btn btn--small btn--call" href="tel:+380685609199">Подзвонити</a>
             <a class="btn btn--small btn--wa" href="https://wa.me/380685609199" target="_blank" rel="noopener">WhatsApp</a>
+            <a class="btn btn--small btn--tg" href="https://t.me/+380685609199" target="_blank" rel="noopener">Telegram</a>
             <a class="btn btn--small btn--viber" href="viber://chat?number=%2B380685609199">Viber</a>
           </div>
         </article>
@@ -255,6 +256,7 @@
           <div class="mgr__links">
             <a class="btn btn--small btn--call" href="tel:+380976208330">Подзвонити</a>
             <a class="btn btn--small btn--wa" href="https://wa.me/380976208330" target="_blank" rel="noopener">WhatsApp</a>
+            <a class="btn btn--small btn--tg" href="https://t.me/+380976208330" target="_blank" rel="noopener">Telegram</a>
             <a class="btn btn--small btn--viber" href="viber://chat?number=%2B380976208330">Viber</a>
           </div>
         </article>
@@ -277,6 +279,19 @@
   <a href="tel:+380685609199" class="dock__call">Подзвонити</a>
   <button type="button" class="dock__book" data-book>Забронювати <small id="dock-price"></small></button>
 </nav>
+
+<div class="fab" role="group" aria-label="Написати менеджеру">
+  <button type="button" class="fab__btn fab__btn--tg" data-chat="tg" aria-label="Написати в Telegram"><svg class="ic" aria-hidden="true"><use href="#i-tg"/></svg></button>
+  <button type="button" class="fab__btn fab__btn--wa" data-chat="wa" aria-label="Написати у WhatsApp"><svg class="ic" aria-hidden="true"><use href="#i-wa"/></svg></button>
+</div>
+
+<dialog class="chat" id="chat" aria-labelledby="chat-title">
+  <div class="chat__head">
+    <h2 class="chat__title" id="chat-title">Кому написати?</h2>
+    <button class="modal__close" type="button" data-close aria-label="Закрити"><svg class="ic" aria-hidden="true"><use href="#i-x"/></svg></button>
+  </div>
+  <div class="chat__list" id="chat-list"></div>
+</dialog>
 
 <!-- booking -->
 <dialog class="modal" id="modal" aria-labelledby="modal-title">
@@ -329,6 +344,8 @@
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-wa" viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 8.6c.3-.6.6-.7.9-.7h.5c.2 0 .4 0 .5.4l.7 1.6c.1.2 0 .4-.1.6l-.5.6c-.1.1-.2.3 0 .5.6 1 1.4 1.8 2.5 2.4.2.1.4.1.5-.1l.6-.7c.2-.2.4-.2.6-.1l1.6.8c.2.1.3.2.3.4 0 .5-.2 1.3-.8 1.6-.6.3-1.6.5-3.6-.6-2.4-1.3-3.6-3.4-3.9-4-.3-.6-.3-1.6.2-2.2z" fill="currentColor"/></symbol>
+  <symbol id="i-tg" viewBox="0 0 24 24"><path d="M21 4.5L3 11.4l5.6 2 2 6.1 3.2-3.5 4.6 3.4z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8.6 13.4L18 6.5l-7.4 8.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
   <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
   <symbol id="i-swap" viewBox="0 0 24 24"><path d="M7 4v14M7 18l-3-3M7 18l3-3M17 20V6M17 6l-3 3M17 6l3 3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
   <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M16 16l4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>

@@ -296,17 +296,47 @@
 
   /* ---------- dialogs: scroll lock, focus return ---------- */
   var lastFocus = null;
+  var lockY = 0, locks = 0;
+  function lockScroll(on) {
+    var b = d.body;
+    if (on) { if (locks++) return; lockY = w.scrollY; b.style.top = -lockY + 'px'; b.classList.add('is-locked'); }
+    else { if (!locks || --locks) return; b.classList.remove('is-locked'); b.style.top = ''; w.scrollTo({ top: lockY, left: 0, behavior: 'instant' }); }
+  }
   function openDialog(dlg) {
+    if (dlg.open) return;
     lastFocus = d.activeElement;
     if (typeof dlg.showModal === 'function') dlg.showModal(); else dlg.setAttribute('open', '');
-    d.body.classList.add('is-locked');
+    lockScroll(true);
   }
-  [lb, $('#modal')].forEach(function (dlg) {
+  [lb, $('#modal'), $('#chat')].forEach(function (dlg) {
     dlg.addEventListener('close', function () {
-      d.body.classList.remove('is-locked');
+      lockScroll(false);
       var f = dlg === lb ? opener : lastFocus;
       if (f && f.focus) f.focus({ preventScroll: true });
     });
+  });
+
+  /* ---------- floating WhatsApp / Telegram: choose a manager ---------- */
+  var chat = $('#chat'), chatList = $('#chat-list');
+  var APPS = {
+    wa: { name: 'WhatsApp', color: '#25d366', url: function (n) { return 'https://wa.me/' + n; } },
+    tg: { name: 'Telegram', color: '#229ed9', url: function (n) { return 'https://t.me/+' + n; } }
+  };
+  $$('[data-chat]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var key = b.dataset.chat, a = APPS[key];
+      $('#chat-title').textContent = 'Написати в ' + a.name;
+      chatList.innerHTML = Object.keys(MGR).map(function (n, i) {
+        return '<a class="chat__item" href="' + a.url(n) + '" target="_blank" rel="noopener">' +
+          '<span class="chat__ava" style="background:' + a.color + '"><svg class="ic" aria-hidden="true"><use href="#i-' + key + '"/></svg></span>' +
+          '<span class="chat__who"><b>Менеджер ' + (i + 1) + '</b><small>' + MGR[n] + '</small></span></a>';
+      }).join('');
+      openDialog(chat);
+    });
+  });
+  chat.addEventListener('click', function (e) {
+    if (e.target.closest('[data-close]') || e.target === chat) { chat.close(); return; }
+    if (e.target.closest('.chat__item')) setTimeout(function () { chat.close(); }, 60);
   });
 
   /* ---------- booking ---------- */
@@ -409,16 +439,6 @@
     }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
     revealEls.forEach(function (el) { rIO.observe(el); });
   } else revealEls.forEach(function (el) { el.classList.add('is-in'); });
-
-  /* ---------- mobile dock: hide over contacts/footer ---------- */
-  if ('IntersectionObserver' in w) {
-    var seen = [], dock = $('.dock');
-    var dIO = new IntersectionObserver(function (es) {
-      es.forEach(function (e) { var i = seen.indexOf(e.target); if (e.isIntersecting && i < 0) seen.push(e.target); if (!e.isIntersecting && i >= 0) seen.splice(i, 1); });
-      dock.classList.toggle('is-hidden', seen.length > 0);
-    });
-    dIO.observe($('.foot')); dIO.observe($('#contacts'));
-  }
 
   /* ---------- live NBU euro rate ---------- */
   function applyRate() {
