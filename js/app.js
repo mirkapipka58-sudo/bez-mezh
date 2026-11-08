@@ -7,6 +7,7 @@
   var reduce = w.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var BM = w.BM || { routes: [], country: {}, disc: { child: 15, pens: 10 }, rate: 51.4 };
   var MAX = 7;
+  var BOOK_TO = '380685609199'; /* booking requests go to manager 1 */
   var MGR = { '380685609199': '068 560 91 99', '380976208330': '097 620 83 30' };
 
   /* ---------- helpers ---------- */
@@ -413,10 +414,10 @@
     lines.push('Орієнтовна сума: ' + fmt(fare(base, 'adult') * P.adult + fare(base, 'child') * P.child + fare(base, 'pens') * P.pens) + ' грн');
     lines.push('Ім\'я: ' + form.name.value.trim(), 'Телефон: ' + form.phone.value.trim());
     if (form.comment.value.trim()) lines.push('Коментар: ' + form.comment.value.trim());
-    var to = form.querySelector('input[name="mgr"]:checked').value;
+    var to = BOOK_TO;
     var url = 'https://wa.me/' + to + '?text=' + encodeURIComponent(lines.join('\n'));
-    var win = w.open(url, '_blank', 'noopener');
-    if (!win) w.location.href = url;
+    var win = w.open(url, '_blank');
+    if (win) { try { win.opener = null; } catch (e) {} } else w.location.href = url;
     modal.close();
     toast('Заявку відкрито у WhatsApp — надішліть повідомлення менеджеру ' + MGR[to]);
   });
